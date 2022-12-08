@@ -19,19 +19,41 @@
 
   <div class="wrapper">
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar brand">Biodiversity Dashboard</a>
+      <a class="navbar brand" href="index.html">Biodiversity Dashboard</a>
       <a class="nav-item">Select ID</a>
-      <a class="nav-item">Demographics</a>
       <a class="nav-item">Bar Chart</a>
       <a class="nav-item">Gauge Chart</a>
       <a class="nav-item">Bubble Chart</a>
     </nav>
     <div class="container-fluid">
       <div class="row">
-        <div class="bg-image p-5 mb-4 text-center">
-          <h1>Belly Button Biodiversity Dashboard</h1>
-          <p>Use the interactive charts below to explore the dataset</p>
+        <div class="col-md-12">
+          <div class="card bg-light mb-3">
+            <div class="card-header text-center">
+              <div class="bg-image p-5">
+                <h1>Belly Button Biodiversity Dashboard</h1>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Over time, people have heard more news about the magnitude of biodiversity that lives 
+                on and within the human body. Recently, there have been studies on what sort of life 
+                exists inside the human navel. Volunteers have allowed researchers to obtain samples 
+                from their navels to see what lives inside. The results have been quite surprising: 
+                There are many different species of bacteria living there, and they all vary by species 
+                and values for each volunteer.<br><br>
+                To better illustrate this, this web page was constructed to chart the biodiversity within 
+                the belly button. The dropdown menu allows the user to select a volunteer by the ID number, 
+                and the result is a panel containing the demographic information of the volunteer as well as 
+                a set of charts displaying the level of biodiverisity and the washing frequency.
+              </p>
+            </div>
+            <div class="card-footer text-center">
+              Use the interactive charts below to explore the dataset
+            </div>
+          </div>
         </div>
+        
       </div>
       <div class="row">
         <div class="col-md-2">
@@ -52,11 +74,28 @@
         <div class="col-md-5">
           <div class="card bg-light mb-3">
             <div id="bar"></div>
+            <h5 class="card-title">Bar Chart - Top 10 OTUs</h5>
+            <p class="card-text">
+              This chart plots out the top ten bacterial species (identified by their OTU ID) 
+              by sample value. When the Test Subject ID is selected from the dropdown menu, 
+              the top OTUs (if they exist) found on the volunteer will be charted here. Each 
+              bar is labeled with an OTU ID number, and hovering the cursor over a bar will 
+              bring up the OTU labels assigned to that specie.
+            </p>
           </div>
         </div>
         <div class="col-md-5">
           <div class="card bg-light mb-3">
             <div id="gauge"></div>
+            <h5 class="card-title">Gauge Chart - Weekly Washing Frequency</h5>
+            <p class="card-text">
+              This chart plots out how often the volunteer washes the navel per week. 
+              When the Test Subject ID is selected from the dropdown menu, the large number 
+              will show the frequency (if the volunteer did not give a number, then a "-" will 
+              be displayed). The gauge curve will have a black curve that illustrates this 
+              value on a scale from 0 to 10. If a "-" was displayed, then the gauge will be blank 
+              just like as if "0" was given.
+            </p>
           </div>
         </div>
       </div>
@@ -64,6 +103,15 @@
         <div class="col-md-12">
           <div class="card bg-light mb-3">
             <div id="bubble"></div>
+            <h5 class="card-title">Bubble Chart - Bacterial Cultures Found</h5>
+            <p class="card-text">
+              This chart plots out all the bacterial species (identified by their OTU ID) 
+              and their sample value. When the Test Subject ID is selected from the dropdown 
+              menu, each OTU (if one exists) found on the volunteer will be charted here. 
+              The OTU ID number determines where on the x-axis the point sits, and the sample 
+              value determines both where on the y-axis the point sits and the size of the point. 
+              Hovering the cursor over a point will bring up the OTU labels assigned to that specie.
+            </p>
           </div>
         </div>
       </div>
