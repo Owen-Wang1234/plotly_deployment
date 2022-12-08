@@ -15,40 +15,57 @@
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 
-<body>
+<body style="background-color: silver;">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 p-5 mb-4 bg-light text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="card bg-light mb-3">
-          <div class="card-header">
-            <h5 class="card-title text-center">Test Subject ID No.:</h5>
-          </div>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <div class="card text-white bg-primary">
-          <div class="card-header">
-            <h4 class="card-title text-center">Demographic Info</h4>
-          </div>
-          <div id="sample-metadata" class="card-body"></div>
+  <div class="wrapper">
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar brand">Biodiversity Dashboard</a>
+      <a class="nav-item">Select ID</a>
+      <a class="nav-item">Demographics</a>
+      <a class="nav-item">Bar Chart</a>
+      <a class="nav-item">Gauge Chart</a>
+      <a class="nav-item">Bubble Chart</a>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="bg-image p-5 mb-4 text-center">
+          <h1>Belly Button Biodiversity Dashboard</h1>
+          <p>Use the interactive charts below to explore the dataset</p>
         </div>
       </div>
-      <div class="col-md-5">
-        <div id="bar"></div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="card bg-light mb-3">
+            <div class="card-header text-center">
+              <h5 class="card-title" style="font-family:monospace">Test Subject ID No. : 
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+              </h5>
+            </div>
+          </div>
+          <div class="card bg-light mb-3" style="font-family:monospace; color:darkblue">
+            <div class="card-header">
+              <h4 class="card-title text-center">Demographic Info</h4>
+            </div>
+            <div id="sample-metadata" class="card-body"></div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card bg-light mb-3">
+            <div id="bar"></div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card bg-light mb-3">
+            <div id="gauge"></div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card bg-light mb-3">
+            <div id="bubble"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
